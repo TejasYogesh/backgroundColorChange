@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing</title>
+</head>
+<style>
+    #container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: grey; */
+    }
+
+    button {
+        /* display:flex; */
+        margin: 350px auto;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        padding: 20px;
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-radius: 20px;
+        transition: all ease-in-out .2s;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+
+
+    }
+
+    button:hover {
+        background-color: green;
+        color: white;
+        cursor: pointer;
+
+    }
+</style>
+
+<body>
+    <div id="container">
+
+        <button onclick="ChangeofColors()">BackGroundColor</button>
+    </div>
+    <script>
+        var index = 0;
+        function ChangeofColors() {
+            
+            var colors = ["orange", "green", "skyblue", "yellow", "lightred"];
+            document.getElementsByTagName('body')[0].style.background = colors[index++];
+            console.log(colors[index])
+            if (index > colors.length - 2) {
+                index = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
